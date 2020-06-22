@@ -1,23 +1,26 @@
-DROP reviewdb IF EXISTS;
+DROP DATABASE IF EXISTS reviewdb;
 
 CREATE DATABASE reviewdb;
 
-USE reviews;
+USE reviewdb;
 
 CREATE TABLE Users (
-    id int auto_increment primary key,
+    id int auto_increment,
     username varchar(55) not null,
-    avi varchar(255) not null
-)
+    avi varchar(255) not null,
+    primary key (id)
+);
 
 CREATE TABLE Places (
-    id int auto_increment primary key,
-    placename varchar(255) not null
-)
+    id int auto_increment,
+    placename varchar(255) not null,
+    primary key (id)
+);
 
 CREATE TABLE Reviews (
-    id int auto_increment primary key,
-    datestamp date not null,
+    id int auto_increment,
+    datestamp varchar(55) not null,
+    body varchar(1000) not null,
     cleanliness int not null,
     communication int not null,
     checkin int not null,
@@ -28,7 +31,8 @@ CREATE TABLE Reviews (
     foreign key (user) references Users (id),
     place int not null,
     foreign key (place) references Places (id),
-)
+    primary key (id)
+);
 
 INSERT INTO `Users` (`username`,`avi`) VALUES ("Dean Burnett","VIW96NCD0OU");
 INSERT INTO `Users` (`username`,`avi`) VALUES ("Dean Lambert","UCI87CBL8CM");
@@ -131,7 +135,7 @@ INSERT INTO `Users` (`username`,`avi`) VALUES ("Breanna Hall","DVI48LNO0QH");
 INSERT INTO `Users` (`username`,`avi`) VALUES ("Maia Perez","QLU93ZQG9RF");
 INSERT INTO `Users` (`username`,`avi`) VALUES ("Martha Sweet","JBQ80EME0LH");
 
-INSERT INSERT `Places` (`placename`) VALUES ("Oahu Beachfront Apartment")
+INSERT INTO `Places` (`placename`) VALUES ("Oahu Beachfront Apartment");
 
 INSERT INTO `Reviews` (`cleanliness`,`communication`,`checkin`,`accuracy`,`location`,`value`,`body`,`datestamp`,`user`,`place`) VALUES (5,5,3,5,1,5,"et nunc. Quisque ornare tortor at risus. Nunc ac sem ut dolor dapibus gravida. Aliquam tincidunt, nunc ac mattis ornare, lectus ante dictum mi, ac mattis velit justo nec ante. Maecenas mi felis, adipiscing fringilla, porttitor vulputate, posuere","May 24th, 2020",1,1);
 INSERT INTO `Reviews` (`cleanliness`,`communication`,`checkin`,`accuracy`,`location`,`value`,`body`,`datestamp`,`user`,`place`) VALUES (4,1,3,3,3,1,"sodales. Mauris blandit enim consequat purus. Maecenas libero est, congue a, aliquet vel, vulputate eu, odio. Phasellus at augue id ante dictum cursus. Nunc mauris elit, dictum eu, eleifend nec, malesuada ut, sem. Nulla interdum. Curabitur dictum. Phasellus in felis. Nulla tempor","August 25th, 2019",2,1);
