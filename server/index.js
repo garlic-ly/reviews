@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path');
 const Model = require('./model.js');
 
 const app = express();
@@ -9,6 +10,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // parse application/json
 app.use(bodyParser.json());
+
+app.use(express.static(path.join(__dirname, '/../client/dist')));
 
 app.get('/api/rooms/:id/reviews', (req, res) => {
   // get reviews from db and return
