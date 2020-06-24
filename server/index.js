@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const Model = require('./model.js');
+const Controller = require('./controller.js');
 
 const app = express();
 const port = 3004;
@@ -15,9 +15,7 @@ app.use(express.static(path.join(__dirname, '/../client/dist')));
 
 app.get('/api/rooms/:id/reviews', (req, res) => {
   // get reviews from db and return
-  Model.getReviews((results) => {
-    res.status(200).send(results);
-  });
+  Controller.getReviews(req, res);
 });
 
 // eslint-disable-next-line no-console

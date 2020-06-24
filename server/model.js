@@ -2,9 +2,10 @@
 const { connection } = require('./db');
 
 const getReviews = (callback) => {
-  connection.query('SELECT * from Reviews', (error, results) => {
+  const query = 'SELECT * FROM Reviews';
+  connection.query(query, (error, results) => {
     if (error) {
-      throw error;
+      callback(error);
     } else {
       callback(results);
     }

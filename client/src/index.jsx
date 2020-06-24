@@ -7,20 +7,22 @@ class App extends React.Component {
     super(props);
     this.state = {
       modal: false,
-      reviews: null,
+      reviews: [],
       url: window.location.href,
+      error: false
     };
     this.handleModal = this.handleModal.bind(this);
   }
 
-
-
   componentDidMount() {
-    // fetch('/api/rooms')
-    // TODO: finish url
-    this.setState({
-      modal: false,
-    });
+    fetch('/api/rooms/:id/reviews')
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result);
+        this.setState({
+          reviews: result,
+        });
+      });
   }
 
   handleModal() {
@@ -30,10 +32,9 @@ class App extends React.Component {
   }
 
   render() {
-    const { url } = this.state;
-    console.log(typeof (url));
+    const { url, reviews } = this.state;
     return (
-      <Reviews url={url} />
+      <Reviews url={url} reviews={reviews} />
     );
   }
 }

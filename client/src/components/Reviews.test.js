@@ -7,9 +7,10 @@ import Reviews from './Reviews';
 
 configure({ adapter: new Adapter() });
 
-test('Reviews render', () => {
-  // Render a checkbox with label in the document
-  const review = shallow(<Reviews />);
-
-  expect(review.text()).to.contain('');
+describe('Tests for Reviews Component', () => {
+  test('Reviews render', () => {
+    // Render a checkbox with label in the document
+    const review = shallow(<Reviews />);
+    expect(review.text()).to.contain('');
+  });
 });

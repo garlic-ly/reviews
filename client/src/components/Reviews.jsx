@@ -1,11 +1,15 @@
 import React from 'react';
-import Review from './Review.jsx';
+import PropTypes from 'prop-types';
+import EachReview from './EachReview.jsx';
 
-const Reviews = ({ reviews, url }) => (
-  <div>{url}</div>
-  // <div>
-  //   {reviews.map((review) => <Review eachReview={review} />)}
-  // </div>
+const Reviews = ({ reviews }) => (
+  <div>
+    {reviews.map((review) => <EachReview eachReview={review} />)}
+  </div>
 );
+
+// Reviews.propTypes = {
+//   reviews: PropTypes.array.isRequired,
+// };
 
 export default Reviews;

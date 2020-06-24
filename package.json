@@ -17,7 +17,8 @@
     "start": "nodemon ./server/index.js",
     "seed": "node ./server/db/seed.js",
     "sqlinit": "mysql -u student -p < ./schema.sql",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
