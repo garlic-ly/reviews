@@ -5,9 +5,9 @@ const getReviews = (callback) => {
   const query = 'SELECT * FROM Reviews';
   connection.query(query, (error, results) => {
     if (error) {
-      callback(error);
+      callback(error, null);
     } else {
-      callback(results);
+      callback(null, results);
     }
   });
 };

@@ -8,7 +8,6 @@ class App extends React.Component {
     this.state = {
       modal: false,
       reviews: [],
-      url: window.location.href,
       error: false
     };
     this.handleModal = this.handleModal.bind(this);
@@ -22,6 +21,9 @@ class App extends React.Component {
         this.setState({
           reviews: result,
         });
+      },
+      (error) => {
+        console.log(error);
       });
   }
 
@@ -32,9 +34,9 @@ class App extends React.Component {
   }
 
   render() {
-    const { url, reviews } = this.state;
+    const { reviews } = this.state;
     return (
-      <Reviews url={url} reviews={reviews} />
+      <Reviews reviews={reviews} />
     );
   }
 }
