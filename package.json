@@ -1,8 +1,9 @@
 {
   "name": "reviews",
   "jest": {
+    "verbose": true,
     "setupFilesAfterEnv": [
-      "<rootDir>client/src/setupTests.js"
+      "<rootDir>client/src/__test__/setupTests.js"
     ]
   },
   "version": "1.0.0",
@@ -18,7 +19,7 @@
     "seed": "node ./server/db/seed.js",
     "sqlinit": "mysql -u student -p < ./schema.sql",
     "test": "jest",
-    "test:coverage": "jest"
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -26,16 +27,19 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "express": "^4.17.1",
     "mysql": "^2.18.1",
+    "node-fetch": "^2.6.0",
     "nodemon": "^2.0.4",
     "path": "^0.12.7",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
     "@babel/preset-env": "^7.10.3",
     "@babel/preset-react": "^7.10.1",
     "babel-loader": "^8.1.0",
+    "babel-jest": "^26.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
@@ -44,6 +48,8 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "jest": "^26.0.1",
+    "jest-enzyme": "^7.1.2",
+    "jest-environment-enzyme": "^7.1.2",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
   }
