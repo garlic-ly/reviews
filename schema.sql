@@ -34,12 +34,12 @@ CREATE TABLE Reviews (
     primary key (id)
 );
 
-INSERT INTO `Users` (`username`,`avi`) VALUES ("Dean Burnett","VIW96NCD0OU");
-INSERT INTO `Users` (`username`,`avi`) VALUES ("Dean Lambert","UCI87CBL8CM");
-INSERT INTO `Users` (`username`,`avi`) VALUES ("Rhoda Hull","RAN18YEB5PL");
-INSERT INTO `Users` (`username`,`avi`) VALUES ("Dieter Potter","PFL00JCM6RI");
-INSERT INTO `Users` (`username`,`avi`) VALUES ("Bruce Burks","EVK48IYT2AP");
-INSERT INTO `Users` (`username`,`avi`) VALUES ("Jescie Shepard","TIA74BIB0LJ");
+INSERT INTO `Users` (`username`,`avi`) VALUES ("Dean Burnett","https://garlic-ly-reviews.s3-us-west-1.amazonaws.com/imgplaceholder.svg");
+INSERT INTO `Users` (`username`,`avi`) VALUES ("Dean Lambert","https://garlic-ly-reviews.s3-us-west-1.amazonaws.com/imgplaceholder.svg");
+INSERT INTO `Users` (`username`,`avi`) VALUES ("Rhoda Hull","https://garlic-ly-reviews.s3-us-west-1.amazonaws.com/imgplaceholder.svg");
+INSERT INTO `Users` (`username`,`avi`) VALUES ("Dieter Potter","https://garlic-ly-reviews.s3-us-west-1.amazonaws.com/imgplaceholder.svg");
+INSERT INTO `Users` (`username`,`avi`) VALUES ("Bruce Burks","https://garlic-ly-reviews.s3-us-west-1.amazonaws.com/imgplaceholder.svg");
+INSERT INTO `Users` (`username`,`avi`) VALUES ("Jescie Shepard","https://garlic-ly-reviews.s3-us-west-1.amazonaws.com/imgplaceholder.svg");
 INSERT INTO `Users` (`username`,`avi`) VALUES ("Desiree Burt","CRS33BQD3HD");
 INSERT INTO `Users` (`username`,`avi`) VALUES ("Jordan Moon","KRE17MOD3IZ");
 INSERT INTO `Users` (`username`,`avi`) VALUES ("Juliet Hughes","BGL40VWM7QR");
