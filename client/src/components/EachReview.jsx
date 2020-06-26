@@ -23,7 +23,7 @@ const getRandomImage = () => images[Math.ceil(Math.random() * 12)];
 const Name = styled.h6`
   font-size: 16px;
   font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
-  font-weightL bold;
+  font-weight: bold;
   color: #222222;
 `;
 
@@ -31,9 +31,15 @@ const Body = styled.p`
   font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif
 `;
 
+const Images = styled.img`
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+`;
+
 const EachReview = ({ eachReview }) => (
   <div>
-    <img src={getRandomImage()} alt="" />
+    <Images src={getRandomImage()} alt="" />
     <Name>
       {eachReview.username}
       <br />

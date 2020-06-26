@@ -15,9 +15,10 @@ class App extends React.Component {
       allReviews: [],
       shortList: [],
       ratings: [],
+      overall: null,
     };
     this.handleModal = this.handleModal.bind(this);
-    this.randomizer = this.randomizer.bind(this);
+    // this.scoreRandomizer = this.scoreRandomizer.bind(this);
   }
 
   componentDidMount() {
@@ -25,10 +26,28 @@ class App extends React.Component {
       .then((res) => res.json())
       .then((result) => {
         const topSix = result.slice(0, 6);
-        this.randomizer();
         this.setState({
           allReviews: result,
           shortList: topSix,
+        });
+      })
+      .catch((error) => {
+        throw new Error(error);
+      });
+    fetch('/api/rooms/:id/ratings')
+      .then((res) => res.json())
+      .then((result) => {
+        const obj = {
+          Cleanliness: result[0].cleanliness,
+          Communication: result[0].communication,
+          'Check In': result[0].checkin,
+          Accuracy: result[0].accuracy,
+          Location: result[0].location,
+          Value: result[0].value,
+        };
+        this.setState({
+          ratings: obj,
+          overall: result[0].overall,
         });
       })
       .catch((error) => {
@@ -42,31 +61,14 @@ class App extends React.Component {
     });
   }
 
-  randomizer() {
-    const precision = 10; // 2 decimals
-    const score = () => Math.floor(Math.random() * (5 * precision - 1 * precision) + 1 * precision) / (1 * precision);
-
-    const object = {
-      Cleanliness: score(),
-      Communication: score(),
-      'Check In': score(),
-      Accuracy: score(),
-      Location: score(),
-      Value: score(),
-    };
-    this.setState({
-      ratings: object,
-    });
-  }
-
   render() {
     const {
-      allReviews, shortList, modal, ratings,
+      allReviews, shortList, modal, ratings, overall,
     } = this.state;
     if (!modal) {
       return (
         <div>
-          <OverallScore />
+          <OverallScore score={overall} />
           <Ratings ratings={ratings} />
           <Reviews reviews={shortList} />
         </div>
@@ -74,7 +76,7 @@ class App extends React.Component {
     }
     return (
       <div>
-        <OverallScore />
+        <OverallScore score={overall} />
         <Reviews reviews={allReviews} />
       </div>
     );

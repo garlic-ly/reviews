@@ -12,6 +12,18 @@ const getReviews = (callback) => {
   });
 };
 
+const getRatings = (callback) => {
+  const query = 'SELECT * FROM Places';
+  connection.query(query, (error, results) => {
+    if (error) {
+      callback(error, null);
+    } else {
+      callback(null, results);
+    }
+  });
+};
+
 module.exports = {
   getReviews,
+  getRatings,
 };
