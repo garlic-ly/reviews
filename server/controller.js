@@ -11,6 +11,17 @@ const getReviews = (req, res) => {
   });
 };
 
+const getRatings = (req, res) => {
+  Model.getRatings((err, results) => {
+    if (err) {
+      res.status(400).send(err);
+    } else {
+      res.status(200).send(results);
+    }
+  });
+};
+
 module.exports = {
   getReviews,
+  getRatings,
 };

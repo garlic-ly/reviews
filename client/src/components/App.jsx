@@ -1,5 +1,10 @@
+/* eslint-disable max-len */
+/* eslint-disable import/extensions */
 import React from 'react';
 import Reviews from './Reviews.jsx';
+import OverallScore from './OverallScore.jsx';
+import Ratings from './Ratings.jsx';
+
 const fetch = require('node-fetch');
 
 class App extends React.Component {
@@ -9,8 +14,11 @@ class App extends React.Component {
       modal: false,
       allReviews: [],
       shortList: [],
+      ratings: [],
+      overall: null,
     };
     this.handleModal = this.handleModal.bind(this);
+    // this.scoreRandomizer = this.scoreRandomizer.bind(this);
   }
 
   componentDidMount() {
@@ -26,6 +34,25 @@ class App extends React.Component {
       .catch((error) => {
         throw new Error(error);
       });
+    fetch('/api/rooms/:id/ratings')
+      .then((res) => res.json())
+      .then((result) => {
+        const obj = {
+          Cleanliness: result[0].cleanliness,
+          Communication: result[0].communication,
+          'Check In': result[0].checkin,
+          Accuracy: result[0].accuracy,
+          Location: result[0].location,
+          Value: result[0].value,
+        };
+        this.setState({
+          ratings: obj,
+          overall: result[0].overall,
+        });
+      })
+      .catch((error) => {
+        throw new Error(error);
+      });
   }
 
   handleModal() {
@@ -35,14 +62,23 @@ class App extends React.Component {
   }
 
   render() {
-    const { allReviews, shortList, modal } = this.state;
+    const {
+      allReviews, shortList, modal, ratings, overall,
+    } = this.state;
     if (!modal) {
       return (
-        <Reviews reviews={shortList} />
+        <div>
+          <OverallScore score={overall} />
+          <Ratings ratings={ratings} />
+          <Reviews reviews={shortList} />
+        </div>
       );
     }
     return (
-      <Reviews reviews={allReviews} />
+      <div>
+        <OverallScore score={overall} />
+        <Reviews reviews={allReviews} />
+      </div>
     );
   }
 }
