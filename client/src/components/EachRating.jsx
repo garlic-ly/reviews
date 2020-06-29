@@ -8,11 +8,12 @@ import Bar from './RatingBar.jsx';
 // Can probably use <hr width="20%"> but adjust the width based on rating
 
 const Grid = styled.div`
+  width: 300px;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: row;
 `;
 
-const Body = styled.p`
+const Body = styled.div`
   font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
   display: flex;
   flex-direction: row;
@@ -21,7 +22,7 @@ const Body = styled.p`
 
 const EachRating = ({ category, rating }) => (
   <Grid>
-    <Body>{category}: <Bar rating={rating} /> {rating} </Body>
+    <Body>{category}: </Body> <Bar rating={rating} />
   </Grid>
 );
 

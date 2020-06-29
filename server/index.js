@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
 app.use(bodyParser.json());
 
-app.use('/api/rooms/:id/', express.static(path.join(__dirname, '/../client/dist')));
+app.use('/rooms/:id/', express.static(path.join(__dirname, '/../client/dist')));
 
 app.get('/api/rooms/:id/reviews', (req, res) => {
   // get reviews from db and return

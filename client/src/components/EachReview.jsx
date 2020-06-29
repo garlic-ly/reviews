@@ -5,6 +5,7 @@ import styled from 'styled-components';
 // eslint-disable-next-line max-len
 const Review = styled.div`
   margin: 40px 0px 40px 0px;
+  width: 600px;
 `;
 
 const User = styled.div`
