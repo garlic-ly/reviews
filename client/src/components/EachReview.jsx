@@ -25,8 +25,9 @@ const Name = styled.h6`
 
 const Date = styled.div`
   font-family: sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: lighter;
+  margin: 4px 0px 0px 0px;
   color: #717171;
 `;
 
