@@ -16,7 +16,7 @@ const RatingsDiv = styled.div`
 
 const fetch = require('node-fetch');
 
-class App extends React.Component {
+class ReviewsApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -94,4 +94,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default ReviewsApp;

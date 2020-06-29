@@ -4,10 +4,9 @@
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/garlic-ly/calendar-service
+  - https://github.com/garlic-ly/photo-gallery-service
+  - https://github.com/garlic-ly/reviews-proxy
 
 ## Table of Contents
 
@@ -17,13 +16,18 @@
 
 ## Usage
 
-> Some usage instructions
+> Ensure MySQL installation
+> Ensure edit to config.example.js
+> Run "npm run sqlinit"
+> Run "npm run react-dev"
+> Run "npm start"
+
 
 ## Requirements
 
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
-- Node 6.13.0
+- Node 12.14.0
+- MySQL
 - etc
 
 ## Development
