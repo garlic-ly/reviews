@@ -6,14 +6,16 @@ import styled from 'styled-components';
 
 const Rating = styled.h3`
   font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  font-size: 16pt;
   color: #222222;
   display: flex;
   flex-direction: row;
 `;
 
 const IMG = styled.img`
-  height: 20px;
-  width: 20px;
+  height: 21px;
+  width: 21px;
 `;
 
 const OverallScore = ({ score }) => (

@@ -35,18 +35,18 @@ CREATE TABLE Reviews (
     primary key (id)
 );
 
-INSERT INTO `Users` (`username`,`avi`) VALUES ("Dean Burnett","https://garlic-ly-reviews.s3-us-west-1.amazonaws.com/imgplaceholder.svg");
-INSERT INTO `Users` (`username`,`avi`) VALUES ("Dean Lambert","https://garlic-ly-reviews.s3-us-west-1.amazonaws.com/imgplaceholder.svg");
-INSERT INTO `Users` (`username`,`avi`) VALUES ("Rhoda Hull","https://garlic-ly-reviews.s3-us-west-1.amazonaws.com/imgplaceholder.svg");
-INSERT INTO `Users` (`username`,`avi`) VALUES ("Dieter Potter","https://garlic-ly-reviews.s3-us-west-1.amazonaws.com/imgplaceholder.svg");
-INSERT INTO `Users` (`username`,`avi`) VALUES ("Bruce Burks","https://garlic-ly-reviews.s3-us-west-1.amazonaws.com/imgplaceholder.svg");
-INSERT INTO `Users` (`username`,`avi`) VALUES ("Jescie Shepard","https://garlic-ly-reviews.s3-us-west-1.amazonaws.com/imgplaceholder.svg");
-INSERT INTO `Users` (`username`,`avi`) VALUES ("Desiree Burt","CRS33BQD3HD");
-INSERT INTO `Users` (`username`,`avi`) VALUES ("Jordan Moon","KRE17MOD3IZ");
-INSERT INTO `Users` (`username`,`avi`) VALUES ("Juliet Hughes","BGL40VWM7QR");
-INSERT INTO `Users` (`username`,`avi`) VALUES ("Julian Santos","ACI96DFA7FF");
-INSERT INTO `Users` (`username`,`avi`) VALUES ("Marvin Delacruz","NWA72OJX9HK");
-INSERT INTO `Users` (`username`,`avi`) VALUES ("Georgia Best","FZN51JUY9CW");
+INSERT INTO `Users` (`username`,`avi`) VALUES ("Dean Burnett","https://garlic-ly-reviews.s3-us-west-1.amazonaws.com/randomphotos/boy1.jpg");
+INSERT INTO `Users` (`username`,`avi`) VALUES ("Dean Lambert","https://garlic-ly-reviews.s3-us-west-1.amazonaws.com/randomphotos/boy2.jpg");
+INSERT INTO `Users` (`username`,`avi`) VALUES ("Rhoda Hull","https://garlic-ly-reviews.s3-us-west-1.amazonaws.com/randomphotos/cat5.jpg");
+INSERT INTO `Users` (`username`,`avi`) VALUES ("Dieter Potter","https://garlic-ly-reviews.s3-us-west-1.amazonaws.com/randomphotos/cat6.jpg");
+INSERT INTO `Users` (`username`,`avi`) VALUES ("Bruce Burks","https://garlic-ly-reviews.s3-us-west-1.amazonaws.com/randomphotos/dog3.jpg");
+INSERT INTO `Users` (`username`,`avi`) VALUES ("Jescie Shepard","https://garlic-ly-reviews.s3-us-west-1.amazonaws.com/randomphotos/dog4.jpg");
+INSERT INTO `Users` (`username`,`avi`) VALUES ("Desiree Burt","https://garlic-ly-reviews.s3-us-west-1.amazonaws.com/randomphotos/girl1.jpg");
+INSERT INTO `Users` (`username`,`avi`) VALUES ("Jordan Moon","https://garlic-ly-reviews.s3-us-west-1.amazonaws.com/randomphotos/girl2.jpg");
+INSERT INTO `Users` (`username`,`avi`) VALUES ("Juliet Hughes","https://garlic-ly-reviews.s3-us-west-1.amazonaws.com/randomphotos/girl3.jpg");
+INSERT INTO `Users` (`username`,`avi`) VALUES ("Julian Santos","https://garlic-ly-reviews.s3-us-west-1.amazonaws.com/randomphotos/girl4.jpg");
+INSERT INTO `Users` (`username`,`avi`) VALUES ("Marvin Delacruz","https://garlic-ly-reviews.s3-us-west-1.amazonaws.com/randomphotos/girl5.jpg");
+INSERT INTO `Users` (`username`,`avi`) VALUES ("Georgia Best","https://garlic-ly-reviews.s3-us-west-1.amazonaws.com/randomphotos/girl6.jpg");
 INSERT INTO `Users` (`username`,`avi`) VALUES ("Elvis Mcpherson","HQZ48INV1UK");
 INSERT INTO `Users` (`username`,`avi`) VALUES ("Dolan Norris","ZKG98SWN6AH");
 INSERT INTO `Users` (`username`,`avi`) VALUES ("Micah Cunningham","ODQ37ENG0HN");

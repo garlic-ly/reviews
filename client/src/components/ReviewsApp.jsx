@@ -1,13 +1,22 @@
 /* eslint-disable max-len */
 /* eslint-disable import/extensions */
 import React from 'react';
+import styled from 'styled-components';
 import Reviews from './Reviews.jsx';
 import OverallScore from './OverallScore.jsx';
 import Ratings from './Ratings.jsx';
 
+const D1 = styled.div`
+  padding-left: 11%; 
+`;
+
+const RatingsDiv = styled.div`
+  width: 600px;
+`;
+
 const fetch = require('node-fetch');
 
-class App extends React.Component {
+class ReviewsApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -67,20 +76,22 @@ class App extends React.Component {
     } = this.state;
     if (!modal) {
       return (
-        <div>
+        <D1>
           <OverallScore score={overall} />
-          <Ratings ratings={ratings} />
+          <RatingsDiv>
+            <Ratings ratings={ratings} />
+          </RatingsDiv>
           <Reviews reviews={shortList} />
-        </div>
+        </D1>
       );
     }
     return (
-      <div>
+      <D1>
         <OverallScore score={overall} />
         <Reviews reviews={allReviews} />
-      </div>
+      </D1>
     );
   }
 }
 
-export default App;
+export default ReviewsApp;
