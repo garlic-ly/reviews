@@ -1,6 +1,6 @@
 /* eslint-disable import/extensions */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App.jsx';
+import ReviewsApp from './components/ReviewsApp.jsx';
 
-ReactDOM.render(<App />, document.getElementById('reviews-app'));
+ReactDOM.render(<ReviewsApp />, document.getElementById('reviews-app'));

@@ -1,6 +1,6 @@
 # Project Name
 
-> Project description
+> Reviews module for a hotel booking service based in Gilroy, CA
 
 ## Related Projects
 
@@ -28,7 +28,6 @@
 
 - Node 12.14.0
 - MySQL
-- etc
 
 ## Development
 
