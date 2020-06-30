@@ -13,12 +13,12 @@ app.use(bodyParser.json());
 
 app.use('/rooms/:id/', express.static(path.join(__dirname, '/../public')));
 
-app.get('/api/rooms/:id/reviews', (req, res) => {
+app.get('/api/reviews/:id/reviews', (req, res) => {
   // get reviews from db and return
   Controller.getReviews(req, res);
 });
 
-app.get('/api/rooms/:id/ratings', (req, res) => {
+app.get('/api/reviews/:id/ratings', (req, res) => {
   Controller.getRatings(req, res);
 });
 

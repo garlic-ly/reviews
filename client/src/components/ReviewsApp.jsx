@@ -31,7 +31,7 @@ class ReviewsApp extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/api/rooms/:id/reviews')
+    fetch('/api/reviews/:id/reviews')
       .then((res) => res.json())
       .then((result) => {
         const topSix = result.slice(0, 6);
@@ -43,7 +43,7 @@ class ReviewsApp extends React.Component {
       .catch((error) => {
         throw new Error(error);
       });
-    fetch('/api/rooms/:id/ratings')
+    fetch('/api/reviews/:id/ratings')
       .then((res) => res.json())
       .then((result) => {
         const obj = {
